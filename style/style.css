@@ -1408,7 +1408,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 60px;
+  padding: 24px;
 }
 
 .newsletter-box {
@@ -1433,6 +1433,7 @@ img {
 @media (max-width: 600px) {
   .newsletter-box-text h2 {
     font-size: 2rem;
+    line-height: 30px;
     text-align: center;
   }
 }
@@ -1448,6 +1449,7 @@ img {
   .newsletter-box-text p {
     font-size: 0.875rem;
     text-align: center;
+    line-height: 27px;
   }
 }
 
