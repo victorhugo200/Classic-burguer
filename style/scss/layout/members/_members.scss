@@ -1,0 +1,117 @@
+@import '../../colors/colors';
+@import '../../spacing/spacing';
+@import '../../font/font';
+@import '../../functions/functions';
+@import '../../medias/medias';
+.members {
+    margin-top: 120px;
+    .container {
+        overflow: unset;
+    }
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 48px;
+        @include mediaQueries(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &-card {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: $spacing-32;
+        position: relative;
+        @include mediaQueries(lg) {
+            margin: 0 auto;
+            width: 90%;
+        }
+        @include mediaQueries(sm) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        &-content {
+            span {
+                font-size: rem(13);
+                font-family: $font-OP;
+                font-weight: bold;
+            }
+            h2 {
+                margin: $spacing-32 0;
+                font-size: rem(32);
+            }
+            p {
+                color: #9f9e9e;
+                font-size: rem(14);
+                font-family: $font-OP;
+                margin-bottom: $spacing-16;
+                line-height: 32px;
+                width: 70%;
+                @include mediaQueries(sm) {
+                    width: 80%;
+                    margin: 0 auto $spacing-16 auto;
+                }
+            }
+            button {
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                line-height: 24px;
+                border: 0;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 12px 30px;
+                transition: 0.3s;
+                text-transform: uppercase;
+                z-index: 1;
+                i {
+                    margin-left: 6px;
+                    transition: .3s;
+                }
+                &:hover {
+                    i {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+        img {
+            width: 50%;
+            position: absolute;
+            top: 70px;
+            right: -30px;
+            @include mediaQueries(lg) {
+                right: 0;
+                width: 30%;
+            }
+            @include mediaQueries(sm) {
+                display: none;
+            }
+        }
+    }
+    &-card.silver {
+        background-color: #f5f5f5;
+        span,
+        h2 {
+            color: silver;
+        }
+        button {
+            background-color: silver;
+        }
+    }
+    &-card.gold {
+        background-color: #ffe4be;
+        span,
+        h2 {
+            color: #E1901B;
+        }
+        button {
+            background-color: #E1901B;
+        }
+    }
+}

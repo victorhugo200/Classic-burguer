@@ -1,0 +1,97 @@
+@import '../../colors/colors';
+@import '../../spacing/spacing';
+@import '../../font/font';
+@import '../../functions/functions';
+@import '../../medias/medias';
+.main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    &-content {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 220px 0;
+        height: 100%;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, .6);
+            transition: background-color .3s;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+        position: relative;
+        .title {
+            color: map-get($colors, 'white');
+            font-size: rem(60);
+            line-height: 68px;
+            font-family: $font-MT;
+            font-weight: 700;
+            margin-bottom: 20px;
+            @include mediaQueries(md) {
+                font-size: rem(44);
+                text-align: center;
+            }
+            span {
+                color: map-get($colors, 'yw-primary');
+            }
+        }
+        .description {
+            color: map-get($colors, 'white');
+            font-size: rem(16);
+            font-family: $font-OP;
+            max-width: 600px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .button {
+            width: 200px;
+            background-color: map-get($colors, 'yw-primary');
+            padding: $spacing-8;
+            border: 1px solid map-get($colors, 'yw-primary');
+            font-family: $font-OP;
+            height: 45px;
+            color: map-get($colors, 'white');
+            font-weight: 700;
+            cursor: pointer;
+            font-size: rem(14);
+            transition: 0.3s;
+            i {
+                margin-left: $spacing-16;
+                transition: 0.3s ease-in-out;
+                position: relative;
+            }
+            &:hover {
+                background-color: darken(map-get($colors, 'yw-primary'), 20);
+                border-color: darken(map-get($colors, 'yw-primary'), 20);
+                i {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+    &-content.slide-01 {
+        background-image: url('../img/banners/banner-01.jpg');
+    }
+    &-content.slide-02 {
+        background-image: url('../img/banners/banner-02.jpg');
+    }
+    &-content.slide-03 {
+        background-image: url('../img/banners/banner-03.jpg');
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: map-get($colors, 'yw-primary') !important;
+}

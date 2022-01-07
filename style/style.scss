@@ -1,0 +1,33 @@
+@import './scss/reset/reset';
+@import './scss/colors/colors';
+@import './scss/font/font';
+@import './scss/components/components';
+@import './scss/layout/layout';
+@import './scss/medias/medias';
+body {
+    background-color: #141515;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px;
+    font-family: $font-MT;
+    font-weight: 700;
+    line-height: 28px;
+    color: map-get($colors, 'white');
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    @include mediaQueries(lg) {
+        max-width: 100%;
+        padding: 0 $spacing-8;
+    }
+}

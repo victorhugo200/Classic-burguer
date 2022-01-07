@@ -1,0 +1,143 @@
+@import '../../colors/colors';
+@import '../../spacing/spacing';
+@import '../../font/font';
+@import '../../functions/functions';
+@import '../../medias/medias';
+.delivery {
+    background-image: url('../../../../img/banners/cta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .4);
+        z-index: 1;
+    }
+    &-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        position: relative;
+    }
+    &-text {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: $font-MT;
+        width: 100%;
+        h5 {
+            position: relative;
+            font-size: rem(18);
+            font-weight: 700;
+            &::before {
+                content: '';
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 32%;
+                width: 100%;
+                max-width: 130px;
+                height: 2px;
+                background-color: map-get($colors, 'yw-primary');
+                @include mediaQueries(lg) {
+                    max-width: 90px;
+                }
+                @include mediaQueries(md) {
+                    display: none;
+                }
+            }
+            &::after {
+                content: '';
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 32%;
+                width: 100%;
+                height: 2px;
+                max-width: 130px;
+                background-color: map-get($colors, 'yw-primary');
+                @include mediaQueries(lg) {
+                    max-width: 90px;
+                }
+                @include mediaQueries(md) {
+                    display: none;
+                }
+            }
+        }
+        h2 {
+            font-size: rem(42);
+            margin-bottom: $spacing-32;
+            @include mediaQueries(sm) {
+                font-size: rem(32);
+            }
+        }
+        .description {
+            color: map-get($colors, 'yw-primary');
+            font-weight: 800;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            span:nth-child(1) {
+                font-size: rem(42);
+            }
+            span:nth-child(2) {
+                font-size: rem(22);
+            }
+        }
+    }
+    &-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $spacing-32;
+        max-width: 240px;
+        width: 100%;
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: map-get($colors, 'white');
+            i {
+                font-size: rem(44);
+                margin-bottom: $spacing-12;
+            }
+            span {
+                font-family: $font-OP;
+                font-size: rem(14);
+            }
+        }
+        .divider {
+            color: map-get($colors, 'yw-primary');
+            font-size: rem(32);
+            font-weight: bold;
+        }
+    }
+    .button {
+        margin-top: 44px;
+        width: 200px;
+        background-color: map-get($colors, 'yw-primary');
+        padding: $spacing-8;
+        border: 1px solid map-get($colors, 'yw-primary');
+        font-family: $font-OP;
+        height: 45px;
+        color: map-get($colors, 'white');
+        font-weight: 700;
+        cursor: pointer;
+        font-size: rem(14);
+        transition: 0.3s;
+        &:hover {
+            background-color: darken(map-get($colors, 'yw-primary'), 20);
+            border-color: darken(map-get($colors, 'yw-primary'), 20);
+        }
+    }
+}

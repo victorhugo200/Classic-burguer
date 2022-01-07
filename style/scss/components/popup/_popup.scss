@@ -1,0 +1,17 @@
+@import '../../colors/colors';
+@import '../../font/font';
+@import '../../spacing/spacing';
+@import '../../functions/functions';
+.popup {
+    color: white;
+    background-color: map-get($colors, 'black');
+    padding: $spacing-8;
+    border-radius: $spacing-16;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    font-family: $font-OP;
+    font-size: rem(14);
+    margin-bottom: $spacing-20;
+    font-weight: bold;
+}

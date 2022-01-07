@@ -1,0 +1,60 @@
+@import '../../colors/colors';
+@import '../../font/font';
+@import '../../spacing/spacing';
+@import '../../functions/functions';
+@import '../../medias/medias';
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    h4 {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            width: 100%;
+            height: 2px;
+            background-color: map-get($colors, 'yw-primary');
+            @include mediaQueries(lg) {
+                max-width: 60px;
+            }
+            @include mediaQueries(md) {
+                display: none;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 35%;
+            width: 100%;
+            max-width: 110px;
+            height: 2px;
+            background-color: map-get($colors, 'yw-primary');
+            @include mediaQueries(lg) {
+                max-width: 60px;
+            }
+            @include mediaQueries(md) {
+                display: none;
+            }
+        }
+    }
+    h2 {
+        font-size: rem(42);
+        margin-bottom: $spacing-32;
+        @include mediaQueries(md) {
+            font-size: rem(32);
+        }
+    }
+    p {
+        color: map-get($colors, 'white');
+        font-family: $font-OP;
+        line-height: 30px;
+        @include mediaQueries(md) {
+            font-size: rem(15);
+        }
+    }
+}

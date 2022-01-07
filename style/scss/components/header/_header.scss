@@ -1,0 +1,58 @@
+@import '../../colors/colors';
+@import '../../font/font';
+@import '../../spacing/spacing';
+@import '../../medias/medias';
+.header {
+    padding: 24px 4px;
+    background-color: map-get($colors, 'black');
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mediaQueries(md) {
+            justify-content: center;
+        }
+    }
+    &__logo {
+        width: 150px;
+    }
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li a {
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            color: map-get($colors, 'white');
+            padding: $spacing-28 $spacing-20;
+            transition: 0.3s;
+            font-family: $font-OP;
+            &:hover {
+                color: map-get($colors, 'yw-primary');
+            }
+        }
+        @include mediaQueries(md) {
+            display: none;
+        }
+    }
+    &-icons {
+        @include mediaQueries(md) {
+            display: none;
+        }
+        i {
+            color: map-get($colors, 'white');
+            font-size: $spacing-20 !important;
+            margin: 0 $spacing-8;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+                color: map-get($colors, 'yw-primary') !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@mixin mediaQueries($device) {
+    @if $device==lg {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $device==md {
+        @media (max-width: 780px) {
+            @content;
+        }
+    }
+    @else if $device==sm {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+}

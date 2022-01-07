@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.css">
+    <link rel="icon" type="image/png" href="img/logo/logo.png" />
+
+    <title>Classic Burguer</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <img class="header__logo" src="img/logo/logo.png">
+            <ul class="header__ul">
+                <li><a href="#">Home Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="header-icons">
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="main-content swiper-slide slide-01">
+                <span class="popup">Grill</span>
+                <h1 class="title">Meet the <span>Juicy Lucy</span></h1>
+                <p class="description">Bacon ipsum dolor amet ball tip pork chop cow tenderloin andouille. Pastrami pork picanha tongue venison strip steak.</p>
+                <button class="button">ORDER NOW <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="main-content swiper-slide slide-02">
+                <span class="popup">Grill</span>
+                <h1 class="title">Witness the Great <span>Henry</span></h1>
+                <p class="description">Bacon ipsum dolor amet ball tip pork chop cow tenderloin andouille. Pastrami pork picanha tongue venison strip steak.</p>
+                <button class="button">ORDER NOW <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="main-content swiper-slide slide-03">
+                <span class="popup">Grill</span>
+                <h1 class="title">This is the <span>Angus</span></h1>
+                <p class="description">Bacon ipsum dolor amet ball tip pork chop cow tenderloin andouille. Pastrami pork picanha tongue venison strip steak.</p>
+                <button class="button">ORDER NOW <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </main>
+    <section class="food">
+        <div class="container">
+            <div class="food-content">
+
+                <div class="food-01">
+                    <div class="text">
+                        <h5>Burguers</h5>
+                        <h4>Just perfect</h4>
+                    </div>
+                    <img src="img/comidas/food-01.jpg" alt="Comida 01">
+                </div>
+
+                <div class="food-grid">
+
+                    <div class="food-02">
+                        <div class="text">
+                            <h5>Burguers</h5>
+                            <h4>Just perfect</h4>
+                        </div>
+                        <img src="img/comidas/food-02.jpg" alt="Comida 02">
+                    </div>
+                    <div class="food-03">
+                        <div class="text">
+                            <h5>Burguers</h5>
+                            <h4>Just perfect</h4>
+                        </div>
+                        <img src="img/comidas/food-03.jpg" alt="Comida 03">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="info">
+                <h4>Top Picks</h4>
+                <h2>Choose your Meal</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+
+            <div class="products-content">
+                <div class="products-tab">
+                    <button id="btnAppetizers" onclick="filterFoods('Appetizers')">
+                        <i class="fas fa-pizza-slice"></i>
+                        Appetizers
+                    </button>
+                    <button id="btnBurguers" onclick="filterFoods( 'Burguers')">
+                        <i class="fas fa-hamburger"></i>
+                        Burguers
+                    </button>
+                    <button id="btnDrinks" onclick="filterFoods('Drinks')">
+                        <i class="fas fa-beer"></i>
+                        Drinks
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery">
+        <div class="container">
+            <div class="delivery-content">
+                <div class="delivery-text">
+                    <h5>Free Delivery</h5>
+                    <h2>Deal of the Day</h2>
+                    <div class="description">
+                        <span>12</span>
+                        <span>99$</span>
+                    </div>
+                </div>
+
+                <div class="delivery-product">
+                    <div class="product">
+                        <i class="fas fa-hamburger"></i>
+                        <span>Burger of Choice</span>
+                    </div>
+                    <div class="divider">+</div>
+                    <div class="product">
+                        <i class="fas fa-beer"></i>
+                        <span>Free Drink</span>
+                    </div>
+                </div>
+                <button class="button">ORDER NOW </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="backbone ">
+        <div class="container">
+            <div class="info">
+                <h4>Our Backbone</h4>
+                <h2>Client Testimonials</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+            <div class="backbone-container-cards backboneSwiper">
+                <div class="list-cards swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="img/peoples/people-1.jpg" alt="People 1">
+                        <div class="card-content">
+                            <i class="fas fa-quote-left card__icon"></i>
+                            <p class="card__description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                            <h3 class="card__title">John Doe</h3>
+                            <span class="card__job">Food Specialist</span>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="img/peoples/people-2.jpg" alt="People 2">
+                        <div class="card-content">
+                            <i class="fas fa-quote-left card__icon"></i>
+                            <p class="card__description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                            <h3 class="card__title">Heather Madlin</h3>
+                            <span class="card__job">Food Specialist</span>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="img/peoples/people-3.jpg" alt="People 3">
+                        <div class="card-content">
+                            <i class="fas fa-quote-left card__icon"></i>
+                            <p class="card__description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                            <h3 class="card__title">Tina Flinston</h3>
+                            <span class="card__job">Food Specialist</span>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="img/peoples/people-4.jpg" alt="People 4">
+                        <div class="card-content">
+                            <i class="fas fa-quote-left card__icon"></i>
+                            <p class="card__description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                            <h3 class="card__title">Justine Donawick</h3>
+                            <span class="card__job">Food Specialist</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="members">
+        <div class="container">
+            <div class="members-content">
+                <div class="members-card silver">
+                    <div class="members-card-content">
+                        <span>Silver Membership</span>
+                        <h2>Classica Silver</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing industry</p>
+                        <button>JOIN NOW <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <img src="img/members/silver.png" alt="Silver">
+                </div>
+                <div class="members-card gold">
+                    <div class="members-card-content">
+                        <span>Gold Membership</span>
+                        <h2>Classica gold</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing industry</p>
+                        <button>JOIN NOW <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <img src="img/members/gold.png" alt="Silver">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container">
+            <div class="info">
+                <h4>Latest News
+                </h4>
+                <h2>From Our Blog</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+            <div class="blog-content">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/comidas/food-04.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <span class="card__date">January 22, 2020</span>
+                        <a href="#" class="card__title">We are now open. Come visit our new branch</a>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/comidas/food-05.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <span class="card__date">April 26, 2020</span>
+                        <a href="#" class="card__title">Our new menu is now available in all branches</a>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img href="#" src="img/comidas/food-06.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <span class="card__date">April 26, 2020</span>
+                        <a href="#" class="card__title">Taste the glamorous double patty burger</a>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newsletter">
+        <div class="cointainer">
+            <div class="newsletter-box">
+                <div class="newsletter-box-text">
+                    <h2>Join Our Newsletter</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+                <form action="" class="newsletter-box-form">
+                    <input type="text">
+                    <button>Submit<i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="item-info">
+                    <img src="img/logo/logo.png" alt="Logo">
+                    <p>I provide new recipes with a twist on daily basis. I also post blog posts about fun ideas to do in the kitchen</p>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h2 class="title">Top Items</h2>
+                    <ul>
+                        <li><a href="#">Juicy Lucy</a></li>
+                        <li><a href="#">Angus Beef Burger</a></li>
+                        <li><a href="#">Cheesy Bomb</a></li>
+                        <li><a href="#">Crusty Dusty</a></li>
+                        <li><a href="#">King Henry</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h2 class="title">Legal</h2>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Order Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="item-galery">
+                    <h2 class="title">Instagram</h2>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery/1.jpg" alt="Foto 1">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery/2.jpg" alt="Foto 2">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery/3.jpg" alt="Foto 3">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery/4.jpg" alt="Foto 4">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery/5.jpg" alt="Foto 5">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <img src="img/gallery/6.jpg" alt="Foto 6">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="author">
+            <p>© Built with pride and caffeine .All rights reserved - Developed by Victor Hugo Gonçalves</p>
+        </div>
+    </footer>
+    <script type="module" src="js/script.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+
+        const isMobile = matchMedia("(max-width: 600px)").matches;
+        if (isMobile) {
+            const containerCards = document.querySelector('.backbone-container-cards');
+            const listCards = document.querySelector('.backbone-container-cards .list-cards')
+            containerCards.classList.remove('backboneSwiper');
+            listCards.classList.remove('swiper-wrapper')
+
+        } else {
+            const swiperGallery = new Swiper(".backboneSwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                freeMode: true,
+
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
